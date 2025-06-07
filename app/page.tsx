@@ -1,14 +1,10 @@
 import Main from './main/main';
 
 export default function Home() {
+	const apikey = process.env.GIPHY_API_KEY ?? '';
 	return (
 		<>
-			<Main />
-			{/*
-    navbar
-    main
-    footer
-    */}
+			<Main giphy_api={apikey} />
 		</>
 	);
 }

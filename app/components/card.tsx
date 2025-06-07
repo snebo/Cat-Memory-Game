@@ -10,14 +10,18 @@ export default function Card({
 	addCardToSelected: (name: string) => void;
 }) {
 	return (
-		<div className="bg-white flex flex-col items-center justify-center w-65 h-85 hover:shadow-xl shadow-gray-500 hover:ring-slate-500 hover:translate-y-[-3px] hover:scale-[101%] hover:translate-z-80 transition-all duration-450 rounded-xl cursor-pointer active:scale-95 ">
-			<div
-				className="relative w-full h-full shadow-gray-300 "
-				onClick={() => addCardToSelected(cardName)}
-			>
-				<Image src={cardImage} alt={cardName} fill className="object-contain rounded-xl" />
+		<div
+			className="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 cursor-pointer overflow-hidden"
+			onClick={() => addCardToSelected(cardName)}
+		>
+			<div className="w-full h-40 sm:h-48 md:h-56 lg:h-60 overflow-hidden">
+				<img
+					src={cardImage}
+					alt={cardName}
+					className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
+				/>
 			</div>
-			<p className="text-lg font-semibold">{cardName}</p>
+			<p className="text-center text-sm sm:text-base font-semibold p-2 text-gray-700">{cardName}</p>
 		</div>
 	);
 }
