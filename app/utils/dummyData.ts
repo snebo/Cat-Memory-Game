@@ -20,3 +20,5 @@ export const dummyData = [
     { name: 'image19', image: '/example.png' },
     { name: 'image20', image: '/example.png' },
 ]
+
+export const gametypes = ['cat', 'dog', 'pokemon', 'anime', 'onepiece', 'memes']
